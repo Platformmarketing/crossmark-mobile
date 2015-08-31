@@ -23,7 +23,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 })
 
 .config(function($ionicConfigProvider) {
-  $ionicConfigProvider.backButton.text('').icon('ion-chevron-left').previousTitleText(false);
+  $ionicConfigProvider.backButton.text('').icon('ion-ios-arrow-back').previousTitleText(false);
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
