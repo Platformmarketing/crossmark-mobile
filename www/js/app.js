@@ -17,7 +17,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
-      $cordovaStatusBar.style(2);
+      StatusBar.styleDefault();
     }
   });
 })
@@ -25,11 +25,20 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
+  })
+
+  .state('app.welcome', {
+    url: "/welcome",
+      views: {
+        'menuContent' :{
+        templateUrl: "templates/welcome.html"
+      }
+    }
   })
 
   .state('app.search', {
@@ -69,5 +78,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/welcome');
 });
