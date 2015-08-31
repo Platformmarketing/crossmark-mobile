@@ -22,8 +22,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($ionicConfigProvider) {
+  $ionicConfigProvider.backButton.text('').icon('ion-chevron-left').previousTitleText(false);
+})
+
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $stateProvider
+
+
 
   .state('app', {
     url: '/app',
@@ -46,6 +52,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent' :{
         templateUrl: "templates/profile.html"
+      }
+    }
+  })
+
+  .state('app.promotion', {
+    url: "/promotion",
+      views: {
+        'menuContent' :{
+        templateUrl: "templates/promotion.html"
       }
     }
   })
