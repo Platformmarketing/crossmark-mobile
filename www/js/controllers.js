@@ -41,16 +41,54 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+.controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+// MODAL CONTROLLER
+.controller('ModalCtrl', function($scope, $ionicModal) {
+  $scope.contact = {
+    name: 'Butters',
+    info: 'The force is strong with this one'
+  }
+
+  $ionicModal.fromTemplateUrl('ibeaconModal.html', {
+    scope: $scope,
+    animation: 'scale-in'
+  }).then(function(modal) {
+    $scope.modal = modal
+  })  
+
+  $scope.openModal = function() {
+    $scope.modal.show()
+  }
+
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+})
+
+.controller('DialogCtrl', function($scope, $cordovaDialogs) {
+
+  function alertDismissed() {
+    // do something?
+  }
+
+  $scope.alertDialog = function() {
+    // Alert Dialog
+
+    $cordovaDialogs.confirm(
+      "We see you're currently in the dairy isle, we're doubling your Chobani Yogurt discount!", 
+      "Limited Time Offer", 
+      ["Dismiss", "Redeem Now!"]
+    ).then(function(buttonIndex) {
+      // no button = 0, 'OK' = 1, 'Cancel' = 2
+      var btnIndex = buttonIndex;
+    });
+
+  }
+
 });

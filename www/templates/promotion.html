@@ -2,12 +2,34 @@
 
 	<ion-content padding="false" scroll="true">
 
-		<a ui-sref="app.promotion" ><img src="./img/crossmark-promotion3x.png" style="width:100%;"></a>
+	<div ng-controller="DialogCtrl" ng-click="alertDialog()">
 
-		<div class="header">
+		<img src="./img/crossmark-promotion3x.png" style="width:100%;">
 
-		</div>
+	</div>
+<!--
+		<script id="ibeaconModal.html" type="text/ng-template">
+		  <div class="modal">
+		    <ion-header-bar>
+		      <h1 class="title">Edit Contact</h1>
+		    </ion-header-bar>
+		    <ion-content>
+		      <div class="list">
+		        <label class="item item-input">
+		          <span class="input-label">Name</span>
+		          <input type="text" ng-model="contact.name">
+		        </label>
+		        <label class="item item-input">
+		          <span class="input-label">Info</span>
+		          <input type="text" ng-model="contact.info">
+		        </label>
+		      </div>
 
+		      <button class="button button-full button-stable" ng-click="closeModal()">Done</button>
+		    </ion-content>
+		  </div>
+		</script>
+-->
 	</ion-content>
 
 </ion-view>

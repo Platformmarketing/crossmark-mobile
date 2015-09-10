@@ -43,3 +43,42 @@
 .profile.header {
     background-color: #000;
 }
+
+/* MODAL STYLING */
+
+.scale-in {
+    -webkit-transform: scale(0.0);
+    transform: scale(0.0);
+    opacity: 0;
+}
+.scale-in.ng-enter,
+.scale-in > .ng-enter {
+    -webkit-transition: all cubic-bezier(.1, .7, .1, 1) 400ms;
+    transition: all cubic-bezier(.1, .7, .1, 1) 400ms;
+}
+.scale-in.ng-enter-active,
+.scale-in > .ng-enter-active {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: .93;
+}
+.scale-in.ng-leave,
+.scale-in > .ng-leave {
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+}
+
+.modal {
+    top: 20%;
+    right: 20%;
+    bottom: 20%;
+    left: 20%;
+    min-height: 100px;
+    width: 40%;
+    border-radius: 10px;
+    background-color: #666;
+}
+
+.modal .bar {
+    background-color: #666;
+}
