@@ -1,0 +1,16 @@
+{
+  "name": "Crossmark Mobile",
+  "description": "Loyalty Mobile App",
+  "keywords": [
+    "heroku",
+    "salesforce"
+  ],
+  "addons": [
+    "heroku-postgresql",
+    "herokuconnect:demo",
+    "newrelic",
+    "mailgun",
+    "memcachier",
+    "papertrail"
+  ]
+}
