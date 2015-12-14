@@ -14,5 +14,5 @@
     "memcachier",
     "rollbar"
   ],
-  "image":"heroku/nodejs"
+  "image": "heroku/nodejs"
 }
