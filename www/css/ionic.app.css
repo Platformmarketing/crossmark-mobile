@@ -1736,7 +1736,7 @@ $dark:                            #444 !default;
   content: "\f20e"; }
 
 .ion-navicon-round:before {
-  content: "\f20d"; color:green; }
+  content: "\f20d"; }
 
 .ion-navigate:before {
   content: "\f2a3"; }
