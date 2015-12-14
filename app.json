@@ -13,5 +13,6 @@
     "mailgun",
     "memcachier",
     "rollbar"
-  ]
+  ],
+  "image":"heroku/nodejs"
 }
