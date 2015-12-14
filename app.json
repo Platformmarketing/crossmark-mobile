@@ -7,10 +7,11 @@
   ],
   "addons": [
     "heroku-postgresql",
+    "heroku-redis",
     "herokuconnect:demo",
     "newrelic",
     "mailgun",
     "memcachier",
-    "papertrail"
+    "rollbar"
   ]
 }
