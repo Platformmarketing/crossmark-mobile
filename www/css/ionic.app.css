@@ -1736,7 +1736,8 @@ $dark:                            #444 !default;
   content: "\f20e"; }
 
 .ion-navicon-round:before {
-  content: "\f20d"; }
+  content: "\f20d";
+  color: red;}
 
 .ion-navigate:before {
   content: "\f2a3"; }
@@ -4778,7 +4779,8 @@ ion-tabs.tabs-color-active-dark .tab-item {
 .item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; }
+  white-space: nowrap;
+  color:red;}
 
 a.item {
   color: inherit;
